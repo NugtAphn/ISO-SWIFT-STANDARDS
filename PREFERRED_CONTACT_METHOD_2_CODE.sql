@@ -1,0 +1,12 @@
+CREATE TABLE PREFERRED_CONTACT_METHOD_2_CODE (
+    CODE_SET CHAR(4) CHECK (LENGTH(CODE_SET) = 4),
+    CODE_NAME VARCHAR2(20) NOT NULL,
+    DEFINITION VARCHAR2(100) NOT NULL,
+    CONSTRAINT PK_PREFERRED_CONTACT_METHOD_2_CODE PRIMARY KEY (CODE_SET)
+);
+
+INSERT INTO PREFERRED_CONTACT_METHOD_2_CODE (CODE_SET, CODE_NAME, DEFINITION) VALUES ('MAIL', 'Email', 'Preferred method used to reach the contact is per email.');
+INSERT INTO PREFERRED_CONTACT_METHOD_2_CODE (CODE_SET, CODE_NAME, DEFINITION) VALUES ('FAXX', 'Fax', 'Preferred method used to reach the contact is per fax.');
+INSERT INTO PREFERRED_CONTACT_METHOD_2_CODE (CODE_SET, CODE_NAME, DEFINITION) VALUES ('LETT', 'Letter', 'Preferred method used to reach the contact is per letter.');
+INSERT INTO PREFERRED_CONTACT_METHOD_2_CODE (CODE_SET, CODE_NAME, DEFINITION) VALUES ('CELL', 'MobileOrCellPhone', 'Preferred method used to reach the contact is per mobile or cell phone.');
+INSERT INTO PREFERRED_CONTACT_METHOD_2_CODE (CODE_SET, CODE_NAME, DEFINITION) VALUES ('ONLI', 'Online', 'Preferred method used to reach the contact is online.');

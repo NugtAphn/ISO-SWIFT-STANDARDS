@@ -1,0 +1,25 @@
+CREATE TABLE ADDRESS_TYPE_2_CODE (
+    CODE_SET CHAR(4) CHECK (LENGTH(CODE_SET) = 4),
+    CODE_NAME VARCHAR2(20) NOT NULL,
+    DEFINITION VARCHAR2(100) NOT NULL,
+    CONSTRAINT PK_ADDRESS_TYPE_2_CODE PRIMARY KEY (CODE_SET)
+)
+
+INSERT INTO ADDRESS_TYPE_2_CODE (CODE_SET, CODE_NAME, DEFINITION)
+VALUES ('ADDR', 'Postal', 'Address is the complete postal address');
+
+INSERT INTO ADDRESS_TYPE_2_CODE (CODE_SET, CODE_NAME, DEFINITION)
+VALUES ('PBOX', 'POBox', 'Address is a postal office (PO) box');
+
+INSERT INTO ADDRESS_TYPE_2_CODE (CODE_SET, CODE_NAME, DEFINITION)
+VALUES ('HOME', 'Residential', 'Address is the home address');
+
+INSERT INTO ADDRESS_TYPE_2_CODE (CODE_SET, CODE_NAME, DEFINITION)
+VALUES ('BIZZ', 'Business', 'Address is the business address');
+
+INSERT INTO ADDRESS_TYPE_2_CODE (CODE_SET, CODE_NAME, DEFINITION)
+VALUES ('MLTO', 'MailTo', 'Address is the address to which mail is sent');
+
+INSERT INTO ADDRESS_TYPE_2_CODE (CODE_SET, CODE_NAME, DEFINITION)
+VALUES ('DLVY', 'DeliveryTo', 'Address is the address to which delivery
+ is to take place');
